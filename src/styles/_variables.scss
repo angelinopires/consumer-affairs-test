@@ -29,7 +29,35 @@ $base-black-lighest: #939595;
 $background-darker: #fbfbfb;
 $background: $base-white;
 
+// SPACING
+$spacing-4: 0.25rem;
+$spacing-8: 0.5rem;
+$spacing-12: 0.75rem;
+$spacing-16: 1rem;
+$spacing-24: 1.5rem;
+$spacing-32: 2rem;
+$spacing-40: 2.5rem;
+$spacing-48: 3rem;
+$spacing-56: 3.5rem;
+$spacing-64: 4rem;
+$spacing-72: 4.5rem;
+$spacing-80: 5rem;
+$spacing-88: 5.5rem;
+$spacing-96: 6rem;
+$spacing-104: 6.5rem;
+$spacing-112: 7rem;
+$spacing-120: 7.5rem;
+$spacing-128: 8rem;
+
 // FONTS
 $font-page-title: 'Publico';
 $font-section-title: 'Helvetica Neue';
 $font-text: 'Graphik';
+
+// DEVICE
+$mobile-size: 375px;
+$tablet-size: 834px;
+$desktop-size: 1440px;
+
+// ELEVATIONS
+$elevation-5: 0 3px 10px rgba(0, 0, 0, 0.09);
