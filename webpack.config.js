@@ -25,8 +25,12 @@ const config = {
         loader: 'babel-loader',
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: 'asset',
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
       },
       {
         test: /\.(s(a|c)ss)$/,
