@@ -1,6 +1,4 @@
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: blue;
-}
+@import './reset';
+@import './fonts';
+@import './variables';
+@import './global';
