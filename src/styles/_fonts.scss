@@ -1,0 +1,49 @@
+@font-face {
+  font-weight: 500;
+  font-family: 'Publico';
+  font-style: normal;
+  src:
+    url('../assets/fonts/Publico-Medium.woff2') format('woff2'),
+    url('../assets/fonts/Publico-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: 'Publico';
+  font-style: normal;
+  src:
+    url('../assets/fonts/Publico-Bold.woff2') format('woff2'),
+    url('../assets/fonts/Publico-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: 'Graphik';
+  font-style: normal;
+  src:
+    url('../assets/fonts/Graphik-Semibold.woff2') format('woff2'),
+    url('../assets/fonts/Graphik-Semibold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: 'Graphik';
+  font-style: normal;
+  src:
+    url('../assets/fonts/Graphik-Regular.woff2') format('woff2'),
+    url('../assets/fonts/Graphik-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  src:
+    url('../assets/fonts/HelveticaNeueLT-67MdCn.woff2') format('woff2'),
+    url('../assets/fonts/HelveticaNeueLT-67MdCn.woff') format('woff');
+  font-display: swap;
+}
