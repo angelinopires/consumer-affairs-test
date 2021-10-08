@@ -1,0 +1,16 @@
+.header {
+  padding: $spacing-16;
+  background-color: $base-white;
+  box-shadow: $elevation-5;
+
+  &__title {
+    @extend %heading-6-publico;
+
+    @include desktop() {
+      max-width: $page-max-content;
+      margin: 0 auto;
+      font-size: 31.25px;
+      line-height: 150%;
+    }
+  }
+}

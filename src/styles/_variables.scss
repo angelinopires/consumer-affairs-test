@@ -8,10 +8,12 @@ $primary-blue-lighter: #98b6f7;
 $primary-blue-lightest: #eaf1fd;
 $primary-blue-ui: #fbfcff;
 
+$tiertiary-red-darkest: #821c00;
 $tiertiary-red-dark: #a92a00;
 $tiertiary-red: #d83e00;
 $tiertiary-red-light: #e4572e;
 $tiertiary-red-lighter: #e96b47;
+$tiertiary-red-ui: #faf1e6;
 
 $quaternary-green-dark: #579839;
 $quaternary-green: #86c868;
@@ -61,3 +63,14 @@ $desktop-size: 1440px;
 
 // ELEVATIONS
 $elevation-5: 0 3px 10px rgba(0, 0, 0, 0.09);
+$elevation-6: 0 4px 12px rgba(0, 0, 0, 0.08);
+$elevation-7: 0 5px 30px rgba(0, 0, 0, 0.06);
+
+// BORDER
+$border-radius-round: 8px;
+
+// PAGE
+$page-max-content: 1140px;
+
+// ANIMATIONS
+$default-transition: all 200ms cubic-bezier(.5, .54, .46, .96);

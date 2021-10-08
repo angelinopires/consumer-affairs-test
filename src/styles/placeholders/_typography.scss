@@ -1,0 +1,66 @@
+%caption {
+  display: block;
+  margin-bottom: $spacing-8;
+  font-weight: 600;
+  font-size: 12.8px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+%caption-regular {
+  font-weight: normal;
+  font-size: 12.9px;
+  line-height: 150%;
+  letter-spacing: 0.023em;
+}
+
+%body-1-button-xl {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+%body-1-highlight {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 175%;
+  letter-spacing: 0;
+
+  @include desktop() {
+    line-height: 28px;
+  }
+}
+
+%body-2-highlight {
+  font-weight: 500;
+  font-size: 14.4px;
+  line-height: 167%;
+  letter-spacing: 0%;
+
+  @include desktop() {
+    line-height: 24px;
+  }
+}
+
+%body-2-regular {
+  font-weight: 500;
+  font-size: 14.5px;
+  line-height: 167%;
+  letter-spacing: 0.023em;
+}
+
+%heading-6-publico {
+  font-weight: 600;
+  font-size: 20px;
+  font-family: $font-page-title;
+  line-height: 22.5px;
+  letter-spacing: 0;
+}
+
+%heading-6-complementary {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0.023em;
+}

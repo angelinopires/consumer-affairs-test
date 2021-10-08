@@ -1,0 +1,9 @@
+.label {
+  @extend %caption;
+
+  @include desktop() {
+    font-weight: 500;
+    font-size: 14.4px;
+    line-height: 24px;
+  }
+}
