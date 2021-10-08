@@ -1,0 +1,53 @@
+.input {
+  width: 100%;
+  padding: $spacing-12 $spacing-16;
+  color: $base-black;
+  background-color: $base-white;
+  border: 1px solid $base-grey;
+  border-radius: $border-radius-round;
+  transition: $default-transition;
+
+  @extend %body-1-highlight;
+
+  &__helperText {
+    display: none;
+
+    @extend %caption-regular;
+  }
+
+  &::placeholder {
+    color: $base-black-lighter;
+  }
+
+  &:active {
+    background-color: $primary-blue-ui;
+    border-color: $primary-blue-dark;
+  }
+
+  &:not(.input--error, .input--success, :focus):hover {
+    border-color: transparent;
+    box-shadow: $elevation-7;
+  }
+
+  &:focus {
+    border-color: $primary-blue-darkest;
+    outline: 0;
+    box-shadow: $elevation-6;
+  }
+
+  &--error {
+    color: $tiertiary-red-darkest;
+    background-color: $tiertiary-red-ui;
+    border-color: $tiertiary-red-dark;
+
+    ~ .input__helperText {
+      display: block;
+      margin-top: $spacing-8;
+      color: $tiertiary-red;
+    }
+  }
+
+  &--success {
+    border-color: $quaternary-green-dark;
+  }
+}

@@ -9,12 +9,65 @@
 
 <body>
   <main class="page">
-    <header class="page__header">
-      <h1 class="page__title">Mortgage Calculator</h1>
+    <header class="header">
+      <h1 class="header__title">Mortgage Calculator</h1>
     </header>
 
     <div class="page__wrapper">
-      <section class="calculator"></section>
+      <section class="calculator">
+        <h2 class="calculator__title">Change values to calculate your results</h2>
+
+        <form class="calculator__form">
+          <div class="calculator__sliders">
+            <div class="calculator__formGroup">
+              <label class="label">Years of mortgage</label>
+
+              <div class="calculator__sliderInputs">
+                <div class="slider">
+                  <span class="slider__number">1</span>
+                  <input class="slider__input" type="range" min="1" max="40" step="1" required>
+                  <span class="slider__number">40</span>
+                </div>
+                <input class="input" type="number" min="1" max="40" step="1" required>
+              </div>
+            </div>
+
+            <div class="calculator__formGroup">
+              <label class="label">Rate of interest (%)</label>
+
+              <div class="calculator__sliderInputs">
+                <div class="slider">
+                  <span class="slider__number">0.1</span>
+                  <input class="slider__input" type="range" min="0.1" max="10" step="0.1" required>
+                  <span class="slider__number">10</span>
+                </div>
+                <input class="input" type="number" min="0.1" max="10" step="0.1" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="calculator__formGroup calculator__formGroup--loan">
+            <label class="label" for="amount">Loan amount</label>
+            <input class="input" type="number" min="1" step="1" required>
+            <span class="input__helperText">Mandatory field</span>
+          </div>
+
+          <div class="calculator__formGroup calculator__formGroup--tax">
+            <label class="label" for="anualTax">Annual Tax</label>
+            <input class="input" type="number" min="1" step="1" required>
+            <span class="input__helperText">Mandatory field</span>
+          </div>
+
+          <div class="calculator__formGroup calculator__formGroup--insurance">
+            <label class="label" for="anualTax">Annual Insurance</label>
+            <input class="input" type="number" min="1" step="1" required>
+            <span class="input__helperText">Mandatory field</span>
+          </div>
+
+          <button class="button" type="submit">Calculate</button>
+        </form>
+      </section>
+
       <section class="results"></section>
     </div>
   </main>
