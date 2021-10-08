@@ -2,6 +2,7 @@
   display: flex;
   gap: $spacing-12;
   align-items: center;
+  width: 100%;
 
   @include desktop() {
     gap: $spacing-16;
@@ -24,7 +25,6 @@
     position: relative;
     width: 100%;
     min-height: 32px;
-    margin: $spacing-8 0;
     overflow: hidden;
     background-color: transparent;
     transition: $default-transition;
@@ -32,7 +32,6 @@
 
     @include desktop() {
       min-height: 40px;
-      margin: $spacing-12 0;
     }
 
     &:focus {
