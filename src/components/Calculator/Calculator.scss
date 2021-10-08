@@ -1,5 +1,8 @@
 .calculator {
+  position: relative;
+  z-index: 2;
   background-color: $base-white;
+  border-radius: $border-radius-round;
   box-shadow: $elevation-5;
 
   &__form {
@@ -10,7 +13,12 @@
       "tax  insurance"
       "button button";
     gap: $spacing-24 $spacing-16;
-    padding: $spacing-16 $spacing-16 $spacing-32;
+    padding: $spacing-16 $spacing-16 $spacing-56;
+
+    @include desktop() {
+      gap: $spacing-32 $spacing-24;
+      padding: $spacing-32 $spacing-24;
+    }
   }
 
   &__formGroup {
@@ -34,30 +42,34 @@
     @extend %caption-regular;
 
     @include desktop() {
+      padding: $spacing-24;
       font-weight: 500;
       font-size: 14.5px;
+      line-height: 167%;
     }
   }
 
   &__sliders {
     display: grid;
     grid-area: slider;
-    gap: $spacing-12;
+    gap: $spacing-24;
 
     .input {
+      max-width: 88px;
       text-align: center;
     }
 
     @include desktop() {
-      .input {
-        max-width: 88px;
+      gap: $spacing-32;
+
+      .label {
+        margin-bottom: $spacing-16;
       }
     }
   }
 
   &__sliderInputs {
-    display: grid;
-    grid-template-columns: 0.7fr 0.3fr;
+    display: flex;
     gap: $spacing-8;
 
     @include desktop() {

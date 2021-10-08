@@ -2,12 +2,20 @@
   display: flex;
   flex-direction: column;
   gap: $spacing-24;
+  padding-bottom: $spacing-32;
+
+  @include desktop() {
+    gap: $spacing-48;
+  }
 
   &__wrapper {
     width: 100%;
     padding: 0 $spacing-16;
 
     @include desktop() {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      align-items: center;
       max-width: $page-max-content;
       margin: 0 auto;
       padding: 0;
