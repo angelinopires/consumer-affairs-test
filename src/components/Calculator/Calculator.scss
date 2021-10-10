@@ -54,11 +54,6 @@
     grid-area: slider;
     gap: $spacing-24;
 
-    .input {
-      max-width: 88px;
-      text-align: center;
-    }
-
     @include desktop() {
       gap: $spacing-32;
 

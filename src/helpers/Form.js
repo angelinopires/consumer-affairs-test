@@ -1,14 +1,15 @@
 const validateInputError = (element) => {
   if (!element) return
 
+  const parent = element.parentNode
   const errorText = element.nextElementSibling
 
   if (element.validity.valid) {
-    element.classList.remove('input--error')
+    parent.classList.remove('input--error')
     return
   }
 
-  element.classList.add('input--error')
+  parent.classList.add('input--error')
 
   if (!errorText) return
 
