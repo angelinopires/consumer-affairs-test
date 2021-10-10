@@ -1,29 +1,25 @@
+// HELPERS
 import { isFormValid, validateInputError } from '../../helpers/Form'
+import Mortgage from '../../helpers/Mortgage'
 import setMortgageResults from '../../helpers/SetMortgageResult'
 
 const button = document.querySelector('.button')
 const form = document.querySelector('.calculator__form')
 const insuranceInput = document.querySelector('.calculator__formGroup--insurance input')
+const interestInput = document.querySelector('.input--interest input')
+const interestSlider = document.querySelector('.slider__input--interest')
 const loanInput = document.querySelector('.calculator__formGroup--loan input')
-const rateInput = document.querySelector('.input--interest')
-const rateSlider = document.querySelector('.slider__input--interest')
 const results = document.querySelector('.results')
 const taxInput = document.querySelector('.calculator__formGroup--tax input')
-const yearsInput = document.querySelector('.input--years')
+const yearsInput = document.querySelector('.input--years input')
 const yearsSlider = document.querySelector('.slider__input--years')
 
-const mortgageResult = {
-  annualInsurance: 0,
-  annualTax: 0,
-  interest: 0,
-  loan: 0,
-  years: 0,
-}
+const mortgage = new Mortgage()
 
 yearsSlider.addEventListener('input', (event) => {
   const { value } = event.target
 
-  mortgageResult.years = Number(value)
+  mortgage.setYears(value)
   yearsInput.value = value
   validateInputError(yearsInput)
 })
@@ -31,45 +27,45 @@ yearsSlider.addEventListener('input', (event) => {
 yearsInput.addEventListener('input', (event) => {
   const { value } = event.target
 
-  mortgageResult.years = Number(value)
+  mortgage.setYears(value)
   yearsSlider.value = value
   validateInputError(yearsInput)
 })
 
-rateSlider.addEventListener('input', (event) => {
+interestSlider.addEventListener('input', (event) => {
   const { value } = event.target
 
-  mortgageResult.interest = Number(value)
-  rateInput.value = value
-  validateInputError(rateInput)
+  mortgage.setInterest(value)
+  interestInput.value = value
+  validateInputError(interestInput)
 })
 
-rateInput.addEventListener('input', (event) => {
+interestInput.addEventListener('input', (event) => {
   const { value } = event.target
 
-  mortgageResult.interest = Number(value)
-  rateSlider.value = value
-  validateInputError(rateInput)
+  mortgage.setInterest(value)
+  interestSlider.value = value
+  validateInputError(interestInput)
 })
 
 loanInput.addEventListener('input', (event) => {
   const { value } = event.target
 
-  mortgageResult.loan = Number(value)
+  mortgage.setLoan(value)
   validateInputError(loanInput)
 })
 
 taxInput.addEventListener('input', (event) => {
   const { value } = event.target
 
-  mortgageResult.annualTax = Number(value)
+  mortgage.setAnnualTax(value)
   validateInputError(taxInput)
 })
 
 insuranceInput.addEventListener('input', (event) => {
   const { value } = event.target
 
-  mortgageResult.annualInsurance = Number(value)
+  mortgage.setAnnualInsurance(value)
   validateInputError(insuranceInput)
 })
 
@@ -82,13 +78,13 @@ form.addEventListener('submit', (event) => {
 
   if (!isFormValid(form)) return
 
-  setMortgageResults({ ...mortgageResult })
+  setMortgageResults(mortgage.calculateMortgageResult())
   results.classList.remove('results--hidden')
 })
 
 window.addEventListener('load', () => {
-  mortgageResult.years = yearsInput.value
-  mortgageResult.interest = rateInput.value
+  mortgage.setYears(yearsInput.value)
+  mortgage.setInterest(interestInput.value)
 })
 
 window.addEventListener('beforeunload', (event) => {
@@ -98,8 +94,8 @@ window.addEventListener('beforeunload', (event) => {
   form.removeEventListener('submit', () => { })
   insuranceInput.removeEventListener('input', () => { })
   loanInput.removeEventListener('input', () => { })
-  rateInput.removeEventListener('input', () => { })
-  rateSlider.removeEventListener('input', () => { })
+  interestInput.removeEventListener('input', () => { })
+  interestSlider.removeEventListener('input', () => { })
   taxInput.removeEventListener('input', () => { })
   yearsInput.removeEventListener('input', () => { })
   yearsSlider.removeEventListener('input', () => { })

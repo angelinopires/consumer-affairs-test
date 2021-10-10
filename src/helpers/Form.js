@@ -1,3 +1,8 @@
+/**
+ * Validate and display if an input has any error.
+ * @param {HTMLElement} element - The input DOM Element.
+ *
+*/
 const validateInputError = (element) => {
   if (!element) return
 
@@ -33,6 +38,11 @@ const validateInputError = (element) => {
   }
 }
 
+/**
+ * Validate if all inputs of the form are valid.
+ * @param {HTMLElement} formELEMENT - The form DOM Element.
+ *
+*/
 const isFormValid = (formElement) => {
   const allInputs = Array.from(formElement.querySelectorAll('input'))
 
