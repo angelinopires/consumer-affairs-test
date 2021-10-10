@@ -1,29 +1,22 @@
-import {
-  getInsurancePrice, getMontlyPayment, getPrincipalAndInterests, getTaxPrice,
-} from './CalculateMortgage'
-import formatToCurrency from './FormatToCurrency'
-
+const insuranceElement = document.querySelector('.results__value--insurance')
 const interestElement = document.querySelector('.results__value--interest')
 const taxElement = document.querySelector('.results__value--tax')
-const insuranceElement = document.querySelector('.results__value--insurance')
 const totalElement = document.querySelector('.results__value--total')
 
-const setMortgageResults = ({
-  annualInsurance,
-  annualTax,
-  interest,
-  loan,
-  years,
-}) => {
-  const principalAndInterests = getPrincipalAndInterests(interest, loan, years)
-  const taxPrice = getTaxPrice(annualTax)
-  const insurancePrice = getInsurancePrice(annualInsurance)
-  const total = getMontlyPayment(principalAndInterests, taxPrice, insurancePrice)
+/**
+ * Set the mortgage results on the respective elements.
+ * @param {import('./Mortgage').MortgageResult} mortgageResults
+ *
+*/
+const setMortgageResults = (mortgageResults) => {
+  const {
+    principleAndInterest, insurance, tax, monthlyPayment,
+  } = mortgageResults
 
-  interestElement.textContent = formatToCurrency({ value: principalAndInterests })
-  taxElement.textContent = formatToCurrency({ value: taxPrice })
-  insuranceElement.textContent = formatToCurrency({ value: insurancePrice })
-  totalElement.textContent = formatToCurrency({ value: total })
+  interestElement.textContent = principleAndInterest
+  taxElement.textContent = tax
+  insuranceElement.textContent = insurance
+  totalElement.textContent = monthlyPayment
 }
 
 export default setMortgageResults
