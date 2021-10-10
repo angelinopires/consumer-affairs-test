@@ -16,6 +16,16 @@ const yearsSlider = document.querySelector('.slider__input--years')
 
 const mortgage = new Mortgage()
 
+const clearInputs = () => {
+  insuranceInput.value = 0
+  interestInput.value = 5
+  interestSlider.value = 5
+  loanInput.value = 0
+  taxInput.value = 0
+  yearsInput.value = 20
+  yearsSlider.value = 20
+}
+
 yearsSlider.addEventListener('input', (event) => {
   const { value } = event.target
 
@@ -89,6 +99,8 @@ window.addEventListener('load', () => {
 
 window.addEventListener('beforeunload', (event) => {
   event.preventDefault()
+
+  clearInputs()
 
   form.removeEventListener('input', () => { })
   form.removeEventListener('submit', () => { })
