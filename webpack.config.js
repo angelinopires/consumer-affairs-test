@@ -7,7 +7,6 @@ const isProduction = process.env.NODE_ENV === 'production'
 const config = {
   entry: './src/index.js',
   devServer: {
-    open: true,
     host: 'localhost',
   },
   devtool: "source-map",
@@ -15,7 +14,7 @@ const config = {
     new HtmlWebpackPlugin({
       template: 'index.html',
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
   ],
   module: {
     rules: [
@@ -33,29 +32,30 @@ const config = {
         type: 'asset/resource',
       },
       {
-        test: /\.(s(a|c)ss)$/,
+        test: /\.(sa|sc|c)ss$/,
+        exclude: /node_modules/,
         use: [
-          MiniCssExtractPlugin.loader,
+          isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true
+              sourceMap: !isProduction
             }
           },
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: true
+              sourceMap: !isProduction
             }
           },
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true
+              sourceMap: !isProduction
             }
           }
         ]
-     }
+      }
     ]
   },
   resolve: {

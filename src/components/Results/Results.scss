@@ -7,10 +7,38 @@
   padding: $spacing-24 $spacing-16 $spacing-64;
   background-color: $background-darker;
   border-radius: $border-radius-round;
+  transition: $default-transition;
 
   @include desktop() {
     max-width: none;
     padding: $spacing-64 $spacing-32;
+  }
+
+  &__value {
+    white-space: nowrap;
+
+    @extend %body-1-highlight;
+
+    &--disabled {
+      color: $base-grey;
+    }
+
+    @include desktop() {
+      font-size: 25px;
+      line-height: 150%;
+    }
+  }
+
+  &--hidden {
+    transform: translateY(-500px);
+
+    .results__value {
+      color: $base-grey;
+    }
+
+    @include desktop() {
+      transform: translateY(0);
+    }
   }
 
   &__title {
@@ -65,21 +93,6 @@
         font-size: 20px;
         line-height: 150%;
       }
-    }
-  }
-
-  &__value {
-    white-space: nowrap;
-
-    @extend %body-1-highlight;
-
-    &--disabled {
-      color: $base-grey;
-    }
-
-    @include desktop() {
-      font-size: 25px;
-      line-height: 150%;
     }
   }
 }
