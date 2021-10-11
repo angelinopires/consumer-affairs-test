@@ -12,6 +12,7 @@
       "loan  loan"
       "tax  insurance"
       "button button";
+    grid-template-columns: 1fr 1fr;
     gap: $spacing-24 $spacing-16;
     padding: $spacing-16 $spacing-16 $spacing-56;
 
