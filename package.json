@@ -4,6 +4,7 @@
   "description": "A test for a Senior Front-end position at Consumer Affairs.",
   "main": "index.js",
   "scripts": {
+    "build:development": "npm run prepare-build && webpack --mode=development --node-env=production",
     "build": "npm run prepare-build && webpack --mode=production --node-env=production",
     "dev": "webpack serve --mode=development",
     "lint:style:fix": "npx stylelint '**/*.scss' --fix",

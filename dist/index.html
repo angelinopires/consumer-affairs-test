@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mortgage Calculator</title>
-</head>
+<script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
 
 <body>
   <main class="page">
@@ -68,9 +68,9 @@
           </div>
 
           <div class="calculator__formGroup calculator__formGroup--loan">
-            <label class="label" for="loan">Loan amount</label>
+            <label class="label" for="amount">Loan amount</label>
             <div class="input input--currency">
-              <input id="loan" name="loan" type="number" min="1" max="1000000" step=".01" placeholder="1000" required>
+              <input type="number" min="1" max="1000000" step=".01" placeholder="1000" required>
               <span class="input__helperText"></span>
             </div>
           </div>
@@ -78,17 +78,15 @@
           <div class="calculator__formGroup calculator__formGroup--tax">
             <label class="label" for="anualTax">Annual Tax</label>
             <div class="input input--currency">
-              <input id="anualTax" name="anualTax" type="number" min="1" max="1000000" step=".01" placeholder="1000"
-                required>
+              <input type="number" min="1" max="1000000" step=".01" placeholder="1000" required>
               <span class="input__helperText"></span>
             </div>
           </div>
 
           <div class="calculator__formGroup calculator__formGroup--insurance">
-            <label class="label" for="annualInsurance">Annual Insurance</label>
+            <label class="label" for="anualTax">Annual Insurance</label>
             <div class="input input--currency">
-              <input id="annualInsurance" name="annualInsurance" type="number" min="1" max="1000000" step=".01"
-                placeholder="300" required>
+              <input type="number" min="1" max="1000000" step=".01" placeholder="300" required>
               <span class="input__helperText"></span>
             </div>
           </div>
