@@ -1,5 +1,6 @@
 {
   "name": "angelino-consumer-affairs-test",
+  "author": "Angelino Oliveira",
   "version": "1.0.0",
   "description": "A test for a Senior Front-end position at Consumer Affairs.",
   "main": "index.js",
@@ -21,7 +22,6 @@
     "iOS 7",
     "last 3 iOS versions"
   ],
-  "author": "Angelino Oliveira",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.15.5",

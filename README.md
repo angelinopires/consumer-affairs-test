@@ -4,14 +4,13 @@
 </p>
 
 ## 🖥️ Demo
-Check the final result (TODO: Insert the last deploy link here).
+Check the final result [here](https://confident-noyce-155ab6.netlify.app/).
 
 ## 🤖 Prerequisites
 * Node version used: **14.17.6**
 * NPM version used: **6.14.15**
 
 ## ▶️ Getting start
-
 Install dependencies:
 
 ```bash
@@ -32,10 +31,10 @@ Open this link on your favorite browser [http://localhost:8080](http://localhost
 * [Requisites](https://docs.google.com/document/d/1M2vZ2QRg2kK7JruhyR7Xbw78oK4OSBQpXk7u_c3gexE/edit)
 
 ## 🤖 Known issues
-
 * Small mortgage calculations could have a difference of $0,01 due to the high number of decimals.
 
 ## 🦾What could be improved
 * Split the HTML code into reusable components with separated style and logic.
+* Unit tests for the most critical functions.
 * Auto-format every number tipped on Currency input.
 * Create a better way to use typography variables from the Design System.
