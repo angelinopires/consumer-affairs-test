@@ -4,13 +4,4 @@
 @import './mixins';
 @import './placeholders';
 @import './global';
-
-// COMPONENTS
-@import '../components/Button/Button';
-@import '../components/Calculator/Calculator';
-@import '../components/Header/Header';
-@import '../components/Input/Input';
-@import '../components/Label/Label';
-@import '../components/Slider/Slider';
-@import '../components/Results/Results';
-@import '../pages/Home/Home';
+@import './components';
